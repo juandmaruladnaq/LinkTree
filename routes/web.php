@@ -26,3 +26,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/links', App\Http\Controllers\LinkController::class);
     Route::resource('/redes', App\Http\Controllers\RedController::class);
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

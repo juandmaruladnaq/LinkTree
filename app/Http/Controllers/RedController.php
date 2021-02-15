@@ -17,9 +17,9 @@ class RedController extends Controller
      */
     public function index()
     {
-        $links = Link::ownedBy(Auth::id())->simplePaginate(5);
-
-        return view('links.index', compact('links'));
+         $reds = Red::ownedBy(Auth::id())->simplePaginate(5);
+          return view('redes.index', compact('reds'));
+       
     }
 
     /**
@@ -29,7 +29,7 @@ class RedController extends Controller
      */
     public function create()
     {
-        return view('links.create');
+        return view('redes.create');
     }
 
     /**
@@ -38,15 +38,15 @@ class RedController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(LinkRequest $request)
+    public function store(RedRequest $request)
     {
-        $link = new Link();
-        $link->label = $request->input('label');
-        $link->url = $request->input('url');
-        $link->user_id = Auth::id();
-        $link->save();
+        $red = new Red();
+        $red->label = $request->input('label');
+        $red->url = $request->input('url');
+        $red->user_id = Auth::id();
+        $red->save();
 
-        return redirect(route('links.index'))->with('_success', '¡Enlace creado exitosamente!');
+        return redirect(route('redes.index'))->with('_success', '¡Enlace creado exitosamente!');
     }
 
     /**
@@ -55,9 +55,9 @@ class RedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Link $link)
+    public function show(Red $red)
     {
-        return view('links.show', compact('link'));
+        return view('redes.show', compact('red'));
     }
 
     /**
@@ -66,9 +66,9 @@ class RedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Link $link)
+    public function edit(Red $red)
     {
-        return view('links.edit', compact('link'));
+        return view('redes.edit', compact('red'));
     }
 
     /**
@@ -78,13 +78,13 @@ class RedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(LinkRequest $request, Link $link)
+    public function update(RedRequest $request, Red $red)
     {
-        $link->label = $request->input('label');
-        $link->url = $request->input('url');
-        $link->save();
+        $red->label = $request->input('label');
+        $red->url = $request->input('url');
+        $red->save();
 
-        return redirect(route('links.index'))->with('_success', '¡Enlace editado exitosamente!');
+        return redirect(route('redes.index'))->with('_success', '¡Enlace editado exitosamente!');
     }
 
     /**
@@ -93,11 +93,11 @@ class RedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Link $link)
+    public function destroy(Red $red)
     {
-        if($link->owner->id == Auth::id())
+        if($red->owner->id == Auth::id())
         {
-            $link->delete();
+            $red->delete();
 
             return back()->with('_success', '¡Enlace borrado exitosamente!');
         }
