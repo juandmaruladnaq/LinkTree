@@ -9,7 +9,7 @@
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="opciones" id="opciones_2" value="{{ old('label', $red->label ?? "") }}">
+          <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "TWITTER") }}">
           TWITTER
         </label>
       </div>

@@ -58,8 +58,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('links.index') }}"><i class="far fa-list-alt"></i> Listar</a>
-                                <a class="dropdown-item" href="{{ route('links.create') }}"><i class="fas fa-plus"></i> Agregar</a>
+                                <a class="dropdown-item" href="{{ route('links.index') }}"><i class="far fa-list-alt"></i> gestionar links</a>
+                                <a class="dropdown-item" href="{{ route('reds.index') }}"><i class="fas fa-plus"></i> gestionar redes</a>
+                                
                             </div>
                         </li>
 

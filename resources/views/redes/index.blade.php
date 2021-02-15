@@ -4,7 +4,7 @@
 
 <<div class="container">
     <h1>Mis redes</h1>
-    <a type="button" class="btn btn-primary mb-4 mt-2" href="{{ route('redes.create') }}"><i class="far fa-plus-square"></i> Crear Red Social</a>
+    <a type="button" class="btn btn-primary mb-4 mt-2" href="{{ route('reds.create') }}"><i class="far fa-plus-square"></i> Crear Red Social</a>
     <table class="table table-striped table-hover">
         <tr>
             <th scope="col">Código</td>
@@ -20,9 +20,9 @@
                 <td><a href="{{ $red->url }}">{{ $red->url }}</a></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="red options">
-                        <a href="{{ route('redes.show', $red->id) }}" class="btn btn-info" title="Ver"><i class="far fa-eye"></i></a>
-                        <a href="{{ route('redes.edit', $red->id) }}" class="btn btn-warning" title="Editar"><i class="far fa-edit"></i></a>
-                        <form action="{{ route('redes.destroy', $red->id) }}" method="post"
+                        <a href="{{ route('reds.show', $red->id) }}" class="btn btn-info" title="Ver"><i class="far fa-eye"></i></a>
+                        <a href="{{ route('reds.edit', $red->id) }}" class="btn btn-warning" title="Editar"><i class="far fa-edit"></i></a>
+                        <form action="{{ route('reds.destroy', $red->id) }}" method="post"
                             onsubmit="return confirm('¿Esta seguro que desea remover la red social?')">
                             @csrf
                             @method('delete')
@@ -33,8 +33,8 @@
             </tr>
         @endforeach
     </table>
-
-    {{-- {{ $reds->redes() }} --}}
+{{-- 
+    {{ $reds->reds() }} --}}
 </div>
 
 @endsection

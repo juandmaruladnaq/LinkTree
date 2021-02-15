@@ -46,7 +46,7 @@ class RedController extends Controller
         $red->user_id = Auth::id();
         $red->save();
 
-        return redirect(route('redes.index'))->with('_success', '¡Enlace creado exitosamente!');
+        return redirect(route('reds.index'))->with('_success', '¡Enlace creado exitosamente!');
     }
 
     /**
@@ -84,7 +84,7 @@ class RedController extends Controller
         $red->url = $request->input('url');
         $red->save();
 
-        return redirect(route('redes.index'))->with('_success', '¡Enlace editado exitosamente!');
+        return redirect(route('reds.index'))->with('_success', '¡Enlace editado exitosamente!');
     }
 
     /**

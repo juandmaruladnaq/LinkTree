@@ -5,7 +5,7 @@
     <h1>Crear una nueva red social</h1>
     @include('layouts.sub_form-errors')
     <a type="button" class="btn btn-secondary mb-4 mt-2" href="{{ url()->previous() }}"><i class="far fa-hand-point-left"></i> Volver</a>
-    <form action="{{ route('redes.store') }}" method="post">
+    <form action="{{ route('reds.store') }}" method="post">
         @csrf
         @include('redes.sub_form')
         <button type="submit" class="btn btn-primary">Crear</button>

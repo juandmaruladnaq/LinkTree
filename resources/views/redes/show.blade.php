@@ -32,8 +32,8 @@
     </table>
 
     <div class="btn-group" role="group" aria-label="Red options">
-        <a href="{{ route('redes.edit', $red->id) }}" class="btn btn-warning" title="Editar"><i class="far fa-edit"></i></a>
-        <form action="{{ route('redes.destroy', $red->id) }}" method="post"
+        <a href="{{ route('reds.edit', $red->id) }}" class="btn btn-warning" title="Editar"><i class="far fa-edit"></i></a>
+        <form action="{{ route('reds.destroy', $red->id) }}" method="post"
             onsubmit="return confirm('¿Esta seguro que desea remover el enlace?')">
             @csrf
             @method('delete')
