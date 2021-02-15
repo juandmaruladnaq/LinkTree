@@ -34,7 +34,7 @@
         @endforeach
     </table>
 
-    {{-- {{ $reds->reds() }} --}}
+    {{-- {{ $reds->redes() }} --}}
 </div>
 
 @endsection
