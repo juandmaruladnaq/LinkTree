@@ -3,14 +3,26 @@
     <input type="label" class="form-control" id="label" name="label" value="{{ old('label', $link->label ?? "") }}"> --}}
     <div class="radio">
         <label>
-          <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "YOUTUBE") }}" checked>
-          YOUTUBE
+          <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "GITHUB") }}" >
+          GITHUB
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "TWITTER") }}">
           TWITTER
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "FACEBOOK") }}">
+          FACEBOOK
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="label" id="label" value="{{ old('label', $red->label ?? "INSTAGRAM") }}">
+          INSTAGRAM
         </label>
       </div>
 </div>

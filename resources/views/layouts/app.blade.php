@@ -19,7 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body  background="https://cdn.pixabay.com/photo/2016/11/21/17/57/floor-1846849_960_720.jpg" >
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -52,6 +53,9 @@
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('profile') }}">Mi Perfil <span class="sr-only">(current)</span></a>
+                          </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 Enlaces
@@ -59,7 +63,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('links.index') }}"><i class="far fa-list-alt"></i> gestionar links</a>
-                                <a class="dropdown-item" href="{{ route('reds.index') }}"><i class="fas fa-plus"></i> gestionar redes</a>
+                                <a class="dropdown-item" href="{{ route('reds.index') }}"><i class="far fa-list-alt"></i> gestionar redes</a>
                                 
                             </div>
                         </li>

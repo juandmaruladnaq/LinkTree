@@ -20,6 +20,7 @@
                 <td><a href="{{ $red->url }}">{{ $red->url }}</a></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="red options">
+                        
                         <a href="{{ route('reds.show', $red->id) }}" class="btn btn-info" title="Ver"><i class="far fa-eye"></i></a>
                         <a href="{{ route('reds.edit', $red->id) }}" class="btn btn-warning" title="Editar"><i class="far fa-edit"></i></a>
                         <form action="{{ route('reds.destroy', $red->id) }}" method="post"

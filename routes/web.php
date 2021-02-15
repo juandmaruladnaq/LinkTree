@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
     Route::resource('/links', App\Http\Controllers\LinkController::class);
     Route::resource('/reds', App\Http\Controllers\RedController::class);
 });
