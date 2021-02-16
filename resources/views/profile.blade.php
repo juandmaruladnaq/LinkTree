@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 d-flex flex-column align-items-center">
-        <img class="rounded-circle mt-4" src="https://xavierferras.com/wp-content/uploads/2019/02/266-Persona.jpg" width="100">
+        <img class="rounded-circle mt-4" src="{{ Auth::user()->picture }}" width="100">
         <p class="text-center text-white mb-0 mt-3"></p>
         <div class="card w-100 border-0 shadow mt-4">
           <ul class="list-group list-group-flush border-0">
