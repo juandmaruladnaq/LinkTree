@@ -46,7 +46,7 @@ class RedController extends Controller
         $red->user_id = Auth::id();
         $red->save();
 
-        return redirect(route('reds.index'))->with('_success', '¡Enlace creado exitosamente!');
+        return redirect(route('reds.index'))->with('_success', '¡Red social creada exitosamente!');
     }
 
     /**
@@ -84,7 +84,7 @@ class RedController extends Controller
         $red->url = $request->input('url');
         $red->save();
 
-        return redirect(route('reds.index'))->with('_success', '¡Enlace editado exitosamente!');
+        return redirect(route('reds.index'))->with('_success', '¡Red social editada exitosamente!');
     }
 
     /**
@@ -99,7 +99,7 @@ class RedController extends Controller
         {
             $red->delete();
 
-            return back()->with('_success', '¡Enlace borrado exitosamente!');
+            return back()->with('_success', '¡Red social borrada exitosamente!');
         }
         
         return back()->with('_failure', '¡No tiene permiso de borrar ese recurso!');

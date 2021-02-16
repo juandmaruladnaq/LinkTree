@@ -26,6 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
     Route::resource('/links', App\Http\Controllers\LinkController::class);
     Route::resource('/reds', App\Http\Controllers\RedController::class);
+    /* Route::resource('/users', App\Http\Controllers\UserController::class); */
 });
 Auth::routes();
 

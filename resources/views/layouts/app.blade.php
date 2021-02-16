@@ -83,6 +83,8 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+
+                                    <a class="dropdown-item" href=""><i class="far fa-list-alt"></i> editar perfil</a>
                                 </div>
                             </li>
                         @endguest

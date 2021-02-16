@@ -23,7 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'picture'
+        'picture',
     ];
 
     /**
@@ -53,5 +53,14 @@ class User extends Authenticatable
     public function reds()
     {
         return $this->hasMany(Red::class);
+    }
+    public function scopeOwnedBy($query, $user_id)
+    {
+        return $query->where('user_id', '=', $user_id);
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
