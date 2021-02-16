@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 d-flex flex-column align-items-center">
-        <img class="rounded-circle mt-4" src="https://es.gravatar.com/userimage/3890878/26e5ee1b5d2703e9580d47bab83c0723.png?size=200" width="100">
-        <p class="text-center text-white mb-0 mt-3">@badiali</p>
+        <img class="rounded-circle mt-4" src="https://xavierferras.com/wp-content/uploads/2019/02/266-Persona.jpg" width="100">
+        <p class="text-center text-white mb-0 mt-3"></p>
         <div class="card w-100 border-0 shadow mt-4">
           <ul class="list-group list-group-flush border-0">
             <li class="list-group-item border-0 text-center p-4">
