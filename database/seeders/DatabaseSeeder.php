@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersSeeder::class,
             LinksSeeder::class,
-            RoutesSeeder::class,
+            RedesSeeder::class,
+            
         ]);
     }
 }

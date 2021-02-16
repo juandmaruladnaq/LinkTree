@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class RedesSeeder extends Seeder
 {
@@ -16,10 +17,10 @@ class RedesSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         for($i=0; $i<5; $i++)
-            DB::table('links')->insert([
-                'label'   => $faker->catchPhrase(),
+            DB::table('reds')->insert([
+                'label'   => "INSTAGRAM",
                 'url'     => $faker->url(),
-                'user_id' => 1,
+                'user_id' => 2,
             ]);
     }
 }
