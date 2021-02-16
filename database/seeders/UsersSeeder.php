@@ -25,6 +25,7 @@ class UsersSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => "JUAN DAVID",
+            'picture' => "https://consejoescolar.es/images/2019/02/15/esta-persona-no-existe.jpg",
             'email' => 'otaku@gmail.com',
             'password' => Hash::make('admin123'),
         ]);
