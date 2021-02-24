@@ -18,7 +18,8 @@ class LinkController extends Controller
     public function index()
     {
         $links = Link::ownedBy(Auth::id())->simplePaginate(5);
-
+         
+        
         return view('links.index', compact('links'));
     }
 
