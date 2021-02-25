@@ -34,14 +34,22 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
-        $link = new Link();
-        $link->user_id = 1;
-        $link->label = $request->label;
-        $link->url = $request->url;
-        $link->save();
+        $link = Link::create($request->all());
+
         return response()->json(
             ['data' => $link], 
             201);
+
+
+
+        //$link = new Link();
+        //$link->user_id = 1;
+       // $link->label = $request->label;
+       // $link->url = $request->url;
+        //$link->save();
+        //return response()->json(
+          //  ['data' => $link], 
+           // 201);
         //
     }
 
