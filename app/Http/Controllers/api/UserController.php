@@ -65,12 +65,12 @@ class UserController extends Controller
      * @param  \App\Models\Red  $red
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Red $red)
+    public function update(Request $request, User $user)
     {
-        $red->update($request->all());
+        $user->update($request->all());
 
         return response()->json(
-            ['data' => $red],
+            ['data' => $user],
             200);//
     }
 
@@ -80,9 +80,9 @@ class UserController extends Controller
      * @param  \App\Models\Red  $red
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Red $red)
+    public function destroy(User $user)
     {
-        $red->delete();
+        $user->delete();
         return response(null, 204);
         //
     }
