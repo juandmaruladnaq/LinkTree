@@ -76,7 +76,11 @@ class LinkController extends Controller
      */
     public function update(Request $request, Link $link)
     {
-        //
+        $link->update($request->all());
+
+        return response()->json(
+            ['data' => $link],
+            200);//
     }
 
     /**
