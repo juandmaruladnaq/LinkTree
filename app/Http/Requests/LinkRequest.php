@@ -26,6 +26,7 @@ class LinkRequest extends FormRequest
         return [
             'label' => 'required|max:128',
             'url' => 'required|max:256|url',
+            'user_id'=>''
         ];
     }
 }

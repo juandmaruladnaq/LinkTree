@@ -5,6 +5,8 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Models\Link;
 use Illuminate\Http\Request;
+use App\Http\Requests\LinkRequest;
+
 
 class LinkController extends Controller
 {
@@ -32,6 +34,14 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
+        $link = new Link();
+        $link->user_id = 1;
+        $link->label = $request->label;
+        $link->url = $request->url;
+        $link->save();
+        return response()->json(
+            ['data' => $link], 
+            201);
         //
     }
 
@@ -43,6 +53,9 @@ class LinkController extends Controller
      */
     public function show(Link $link)
     {
+        return response()->json(
+            ['data' => $link], 
+            200);
         //
     }
 

@@ -59,8 +59,5 @@ class User extends Authenticatable
         return $query->where('user_id', '=', $user_id);
     }
 
-    public function owner()
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
+    
 }
