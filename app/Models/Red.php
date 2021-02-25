@@ -17,6 +17,7 @@ class Red extends Model
     protected $fillable = [
         'label',
         'url',
+        'user_id',
     ];
 
     public function scopeOwnedBy($query, $user_id)
